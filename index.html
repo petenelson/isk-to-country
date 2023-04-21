@@ -35,17 +35,18 @@
 			font-size: 2em;
 		}
 
+		#country-dropdown {
+			font-size: 1em;
+		}
+
 		h1, .input-number {
 			font-size: 4em;
 		}
 	</style>
 
 	<h1>
-		ISK to <span id="h1-country"></span>
+		ISK to
 		<select id="country-dropdown">
-			<option>USD</option>
-			<option>CAN</option>
-			<option>EUR</option>
 		</select>
 	<h1>
 
@@ -116,7 +117,6 @@
 			populateQuickReference();
 
 			document.getElementById('qr-country').innerText = country.code;
-			document.getElementById('h1-country').innerText = country.code;
 		};
 
 		const inputChanged = () => {
@@ -146,6 +146,14 @@
 
 			const dropdown = document.getElementById('country-dropdown');
 			const isk = document.getElementById('isk');
+
+			countries.forEach( c => {
+				const opt = document.createElement('option');
+				opt.value = c.code;
+				opt.innerText = c.code;
+
+				dropdown.appendChild(opt);
+			});
 
 			isk.focus();
 			isk.select();
