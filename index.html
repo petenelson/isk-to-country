@@ -1,54 +1,57 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<title>ISK to USD</title>
+		<title>ISK to Country</title>
+
+		<meta property="og:title" content="ISK to Country" />
+		<meta property="og:description" content="Simple ISK to country currency conversion" />
+
+		<style>
+
+			.conversion-table {
+				width: 100%;
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			body {
+				font-family: Arial;
+				font-size: 2em;
+				padding: 1em;
+			}
+
+			td {
+				padding: 1em;
+				padding: 1em;
+			}
+
+			#flag {
+				max-width: 200px;
+			}
+
+			#quick-reference {
+				font-size: 2em;
+			}
+
+			#country-dropdown {
+				font-size: 1em;
+			}
+
+			h1, .input-number {
+				font-size: 4em;
+			}
+		</style>
+
 	</head>
 	<body>
-
-	</body>
-
-	<style>
-
-		.conversion-table {
-			width: 100%;
-		}
-
-		h1 {
-			text-align: center;
-		}
-
-		body {
-			font-family: Arial;
-			font-size: 2em;
-			padding: 1em;
-		}
-
-		td {
-			padding: 1em;
-			padding: 1em;
-		}
-
-		#flag {
-			max-width: 200px;
-		}
-
-		#quick-reference {
-			font-size: 2em;
-		}
-
-		#country-dropdown {
-			font-size: 1em;
-		}
-
-		h1, .input-number {
-			font-size: 4em;
-		}
-	</style>
 
 	<h1>
 		ISK to
 		<select id="country-dropdown">
 		</select>
-	<h1>
+	</h1>
 
 
 	<table class="conversion-table">
@@ -65,12 +68,12 @@
 				<img id="flag" src="" />
 			</td>
 			<td>
-				<span id="target" class="input-number"  />
+				<span id="target" class="input-number"></span>
 			</td>
 		</tr>
 	</table>
 
-	<h2>Quick Reference (ISK: <span id="qr-country"></span>)</h1>
+	<h2>Quick Reference (ISK: <span id="qr-country"></span>)</h2>
 	<div id="quick-reference">
 
 	</div>
@@ -169,4 +172,5 @@
 
 	</script>
 
+</body>
 </html>
