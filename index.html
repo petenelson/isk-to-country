@@ -266,6 +266,8 @@
 			const country = getCountry(dropdown.value);
 			flag.src = 'data:image/png;base64,' + country.flag;
 
+			window.location.hash = '#' + dropdown.value;
+
 			inputChanged();
 			populateQuickReference();
 
@@ -313,6 +315,10 @@
 
 			isk.addEventListener('keyup', inputChanged );
 			dropdown.addEventListener('change', dropdownChanged );
+
+			if (window.location.hash != '') {
+				dropdown.value = window.location.hash.replace('#','');
+			}
 
 			// Load the initial settings.
 			dropdownChanged();
